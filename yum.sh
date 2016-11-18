@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "============init yum list======="
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-v=`cat /etc/red-release`  
+v=`cat /etc/redhat-release`  
 echo $v  
 echo ${v:15:1}
 cmd="wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-${v:15:1}.repo"
