@@ -30,5 +30,10 @@ make
 make install
 echo "# openresty">>/etc/bashrc
 echo "export PATH=/usr/local/openresty/bin:$pstr">>/etc/bashrc
-
+########java -1.8 #################
+yum -y install java-1.8.0-openjdk-devel.i686
+########hadoop#####################
+wget http://apache.fayea.com/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
+tar -zxvf hadoop-2.6.5.tar.gz
+echo "export PATH=/usr/local/hadoop-2.6.5/bin:$pstr">>/etc/bashrc
 echo "============init done======="
