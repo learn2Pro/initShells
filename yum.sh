@@ -20,8 +20,8 @@ cd openresty-1.11.2.1 &&
 make &&
 make install &&
 echo "### openresty ###">>/etc/bashrc &&
-echo "export PATH=/usr/local/openresty/bin:$pstr">>/etc/bashrc &&
-echo "export PATH=/usr/local/openresty/nginx/sbin:$PATH">>/etc/bashrc &&
+echo "export PATH=/usr/local/openresty/bin:/usr/local/openresty/nginx/sbin:$pstr">>/etc/bashrc &&
+source /etc/bashrc &&
 cd /usr/local &&
 ########java -1.8 #################
 yum -y install java-1.8.0-openjdk-devel.x86_64 &&
@@ -39,6 +39,7 @@ echo "export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/lib/pkgconfig:$PKG_CO
 wget http://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz &&
 tar -zxvf hadoop-2.6.5.tar.gz &&
 echo "export PATH=/usr/local/hadoop-2.6.5/bin:$pstr">>/etc/bashrc &&
+source /etc/bashrc &&
 ######## kafka ###################
 wget http://mirrors.tuna.tsinghua.edu.cn/apache/kafka/0.10.1.1/kafka_2.10-0.10.1.1.tgz &&
 tar zvf kafka_2.10-0.10.1.1.tgz &&
@@ -46,11 +47,13 @@ mv kafka_2.10-0.10.1.1/ kafka-2.11/ &&
 echo "# kafka">>/etc/bashrc &&
 echo "export KAFKA_HOME=/usr/local/kafka-2.11">>/etc/bashrc &&
 echo "export PATH=/usr/local/kafka-2.11/bin:$PATH">>/etc/bashrc &&
+source /etc/bashrc &&
 ######## zookeeper #####################
 wget https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz &&
 tar -zxvf zookeeper-3.4.6.tar.gz &&
 echo "# zookeeper">>/etc/bashrc &&
 echo "export PATH=/usr/local/zookeeper-3.4.6/bin:$PATH">>/etc/bashrc &&
+source /etc/bashrc &&
 ####### python pip ###############
 yum -y install python-devel python &&
 wget https://bootstrap.pypa.io/get-pip.py &&
