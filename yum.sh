@@ -41,7 +41,7 @@ tar -zxvf hadoop-2.6.5.tar.gz &&
 echo "export PATH=/usr/local/hadoop-2.6.5/bin:$pstr">>/etc/bashrc &&
 ######## kafka ###################
 wget http://mirrors.tuna.tsinghua.edu.cn/apache/kafka/0.10.1.1/kafka_2.10-0.10.1.1.tgz &&
-tar zvf kafka_2.10-0.10.1.1.tgz &&
+tar -zxf kafka_2.10-0.10.1.1.tgz &&
 mv kafka_2.10-0.10.1.1/ kafka-2.11/ &&
 echo "# kafka">>/etc/bashrc &&
 echo "export KAFKA_HOME=/usr/local/kafka-2.11">>/etc/bashrc &&
